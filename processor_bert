@@ -1,0 +1,16 @@
+from sentence_transformers import SentenceTransformer
+
+# Only load the embedding model here, not the classifier model
+model_embedding = SentenceTransformer('all-MiniLM-L6-v2')
+
+def classify_with_bert(log_message, classifier_model):
+  
+    embeddings = model_embedding.encode([log_message])
+    probabilities = classifier_model.predict_proba(embeddings)[0]
+    
+    if max(probabilities) < 0.5:
+        return "Unclassified"
+    
+    predicted_label = classifier_model.predict(embeddings)[0]
+    
+    return predicted_label

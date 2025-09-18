@@ -1,0 +1,9 @@
+source,log_message,target_label
+ProductionSystem,User User234 logged in.,User Action
+ProductionSystem,User User567 logged out.,User Action
+ProductionSystem,Backup started at 2025-09-18 10:30.,System Notification
+ProductionSystem,Disk cleanup completed successfully.,System Notification
+ProductionSystem,Something happened with the database. It looks like an error occurred.,Error
+LegacyCRM,Unexpected token '}'. This indicates a workflow error.,Workflow Error
+LegacyCRM,The 'deprecated' function is no longer supported in this version.,Deprecation Warning
+ProductionSystem,The system rebooted unexpectedly. There was a critical error.,Unclassified
